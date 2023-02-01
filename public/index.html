@@ -19,10 +19,21 @@
         console.log("Perdimos comunicación con el sevidor");
       });
 
-      socket.emit("mensaje", { nombre: "Willians" });
+      //   socket.emit("mensaje", { nombre: "Willians" });
 
-      socket.on("mensaje", function (payload) {
-        console.log("Escuchando: ", payload);
+      //   socket.emit("emitir-mensaje", { nombre: "Willians" });
+
+      //   socket.on("mensaje", function (payload) {
+      //     console.log("Escuchando: ", payload);
+      //   });
+
+      //   socket.on("nuevo-mensaje", function (payload) {
+      //     console.log("Escuchando: ", payload);
+      //   });
+
+      socket.on("active-bands", function (bands) {
+        console.clear();
+        console.table(bands);
       });
     </script>
   </body>
